@@ -1,4 +1,7 @@
 #! /bin/sh
-. "${HOME}/.cache/wal/colors.sh"
-rofi -show run -width 99 -font "Roboto Mono 10" -bw 2 -location 5 -yoffset -38 -xoffset -8 -terminal urxvt
+if [ -z $1 ]; then
+	rofi -show run -width 15 -bw 2 -location 5 -yoffset -38 -xoffset -8 -icon-theme "Papirus-dark" -terminal st
+else
+	rofi -show run -width 15 -bw 2 -location 1 -yoffset $2 -xoffset $1 -icon-theme "Papirus-dark" -terminal st
+fi
 
